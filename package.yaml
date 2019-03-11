@@ -1,0 +1,85 @@
+name:                yxdb-utils-v2
+version:             0.1.0.0
+github:              "stephenjbarr/yxdb-utils-v2"
+license:             BSD3
+author:              "Stephen Barr"
+maintainer:          "stephen.barr@mip.com.au"
+copyright:           "MIP Australia"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/stephenjbarr/yxdb-utils-v2#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- array
+- attoparsec
+- Codec-Compression-LZF
+- array
+- base ==4.*
+- bimap
+- binary > 0.7.2
+- binary-conduit
+- blaze-builder
+- bytestring >= 0.10.2.0
+- conduit
+- conduit-combinators
+- conduit-extra
+- containers
+- csv-conduit
+- bytestring-builder
+- Decimal
+- directory
+- either
+- exceptions
+- ghc-prim
+- lens
+- monad-loops
+- mtl
+- newtype
+- old-locale
+- parsec
+- primitive
+- reinterpret-cast
+- resourcet 
+- text
+- text-binary
+- time
+- transformers
+- xml-conduit
+- vector
+
+
+library:
+  source-dirs: src
+
+executables:
+  yxdb-utils-v2-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - yxdb-utils-v2
+
+tests:
+  yxdb-utils-v2-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - yxdb-utils-v2

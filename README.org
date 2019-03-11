@@ -1,0 +1,6 @@
+
+* Modernising yxdb-utils
+
+  This is my fork of yxdb-utils.
+  I am going to need to re-write the utilities do to [[https://www.snoyman.com/blog/2018/02/conduitpocalypse][The Conduitpocalypse]].
+  However, the library itself now builds.
